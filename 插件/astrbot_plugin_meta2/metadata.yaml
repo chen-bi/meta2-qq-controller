@@ -1,0 +1,8 @@
+name: astrbot_plugin_meta2
+display_name: 元力2代远程控制
+desc: 让 QQ 机器人在聊天里控制元力系列设备（振动/伸缩/旋转），本机蓝牙直连，指令转成 JSON 发给 127.0.0.1:5199
+help: 后台填 allowed_qq 为自己的 QQ 号；会话里发「开始」连设备，「停」归零
+version: v1.0.0
+author: meta2-controller
+support_platforms:
+  - aiocqhttp

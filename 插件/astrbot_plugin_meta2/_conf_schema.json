@@ -1,0 +1,158 @@
+﻿{
+  "install_dir": {
+    "description": "控制包安装目录",
+    "type": "string",
+    "default": "",
+    "hint": "一般不用填。留空 = 用户目录下的 meta2-controller，安装脚本默认就装在那。"
+  },
+  "allowed_qq": {
+    "description": "允许控制的 QQ 号",
+    "type": "string",
+    "default": "",
+    "hint": "填你自己的 QQ 号（只允许这个号控制）。留空则只认 AstrBot 管理员。"
+  },
+  "max_level": {
+    "description": "档位上限",
+    "type": "int",
+    "default": 100,
+    "slider": {
+      "min": 1,
+      "max": 100,
+      "step": 1
+    },
+    "hint": "安全阀：大于这个数的指令会被压到上限。想留余地可以调低。"
+  },
+  "host": {
+    "description": "守护进程地址",
+    "type": "string",
+    "default": "127.0.0.1",
+    "hint": "meta2_tcp.py 只监听本机，一般不用改。"
+  },
+  "port": {
+    "description": "守护进程端口",
+    "type": "int",
+    "default": 5199,
+    "hint": "和 meta2_tcp.py 里的 PORT 保持一致。"
+  },
+  "auto_start": {
+    "description": "没连上时自动拉起守护进程",
+    "type": "bool",
+    "default": true,
+    "hint": "关掉的话要自己在控制台跑 python meta2_tcp.py。"
+  },
+  "python_path": {
+    "description": "守护进程用的 Python",
+    "type": "string",
+    "default": "",
+    "hint": "留空 = 自动用 <安装目录>\\.venv\\Scripts\\python.exe"
+  },
+  "daemon_script": {
+    "description": "守护进程脚本路径",
+    "type": "string",
+    "default": "",
+    "hint": "留空 = 自动用 <安装目录>\\meta2_tcp.py"
+  },
+  "start_timeout": {
+    "description": "等守护进程连上设备的秒数",
+    "type": "int",
+    "default": 30,
+    "hint": "启动时要先扫 BLE 再连设备，留 30 秒比较稳。"
+  },
+  "llm_enabled": {
+    "description": "允许她听对话自己调",
+    "type": "bool",
+    "default": true,
+    "hint": "开着：她按聊天气氛自己调三个参数（本插件的核心功能）。关了只剩「震动 60」这类手动指令。"
+  },
+  "chat_gate": {
+    "description": "没「开始」不许她动",
+    "type": "bool",
+    "default": true,
+    "hint": "开着的话，要先在私聊里发「开始」，她才会按聊天气氛调；防止日常聊天误触发。"
+  },
+  "min_interval": {
+    "description": "两次调整最少隔几秒",
+    "type": "int",
+    "default": 6,
+    "slider": {
+      "min": 2,
+      "max": 60,
+      "step": 1
+    },
+    "hint": "她调得太勤会一直戳蓝牙，6 秒比较稳。"
+  },
+  "creep_enabled": {
+    "description": "允许自动爬坡",
+    "type": "bool",
+    "default": false,
+    "hint": "开会后发「爬坡」，她每隔一段时间自己往上加一点，不用你催。默认关。"
+  },
+  "creep_step": {
+    "description": "每次爬多少",
+    "type": "int",
+    "default": 5,
+    "slider": {
+      "min": 1,
+      "max": 20,
+      "step": 1
+    }
+  },
+  "creep_interval": {
+    "description": "隔多少秒爬一次",
+    "type": "int",
+    "default": 25,
+    "slider": {
+      "min": 5,
+      "max": 120,
+      "step": 5
+    }
+  },
+  "creep_ceiling": {
+    "description": "爬坡上限",
+    "type": "int",
+    "default": 70,
+    "slider": {
+      "min": 10,
+      "max": 100,
+      "step": 5
+    },
+    "hint": "自动爬坡最多到这个档位，再往上得你自己下指令。"
+  },
+  "auto_follow": {
+    "description": "按语气自动跟随",
+    "type": "bool",
+    "default": false,
+    "hint": "备用的「按关键词整体加减」逻辑（快=全加、慢=全减）。默认关，因为三个参数会一起动；模型控不住时再打开。"
+  },
+  "auto_step": {
+    "description": "一次加减多少",
+    "type": "int",
+    "default": 10,
+    "slider": {
+      "min": 1,
+      "max": 30,
+      "step": 1
+    }
+  },
+  "auto_drift": {
+    "description": "平淡一句话的轻微上浮",
+    "type": "int",
+    "default": 3,
+    "slider": {
+      "min": 0,
+      "max": 10,
+      "step": 1
+    },
+    "hint": "没提快慢的时候每句加这么点，节奏会自己慢慢爬。"
+  },
+  "auto_interval": {
+    "description": "自动跟随的最小间隔（秒）",
+    "type": "int",
+    "default": 3,
+    "slider": {
+      "min": 1,
+      "max": 30,
+      "step": 1
+    }
+  }
+}

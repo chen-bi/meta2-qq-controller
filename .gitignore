@@ -1,0 +1,20 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 运行时产物
+.meta2_addr
+daemon.log
+*.log
+
+# 打包产物
+*.zip
+*.7z
+
+# 编辑器
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
