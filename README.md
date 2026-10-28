@@ -8,6 +8,8 @@
 > 也没有授权任何人代卖。淘宝、闲鱼、QQ 群、Discord 上任何标价出售的，
 > 都不是作者本人 —— 请立刻申请退款，并顺手举报那个卖家。
 >
+> **唯一官方来源**：[github.com/chen-bi/meta2-qq-controller](https://github.com/chen-bi/meta2-qq-controller)
+>
 > 觉得好用，给个 star 就够了。真的不用给任何人钱。
 
 ### 常见的几手骗法
@@ -140,7 +142,7 @@ Copyright (c) Nonpolynomial Labs LLC，BSD-3-Clause。本项目不含任何逆�
 
 这个项目免费开源，不授权任何人售卖。
 
-如果它帮到了你，可以在爱发电上请我喝杯奶茶：<!-- 填你的爱发电链接 -->
+如果它帮到了你，可以在爱发电上请我喝杯奶茶 👉 https://afdian.com/a/linmyzv11
 
 不赞助也完全没问题 —— 一个 star、一个 issue，已经是最大的支持了。
 
